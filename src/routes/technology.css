@@ -1,0 +1,204 @@
+.technology-page-background {
+  background-image: url("../assets/technology/background-technology-mobile.jpg");
+}
+
+.technology-page-container {
+  display: grid;
+  place-items: center;
+  gap: 32px;
+  text-align: center;
+
+  grid-template-areas: 
+  'title'
+  'image'
+  'tabs'
+  'content';
+}
+
+.technology-page-title {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 2.7px;
+  text-transform: uppercase;
+  grid-area: title;
+}
+
+.technology-page-title span {
+  font-weight: 700;
+  color: hsl(var(--white) / 0.25);
+  margin-right: 8px;
+}
+
+.technology-page-menu {
+  display: flex;
+  gap: 16px;
+  grid-area: tabs;
+}
+
+.technology-page-menu > * {
+  font-family: "Bellefair", serif;
+  font-size: 16px;
+  width: 40px;
+  aspect-ratio: 1;
+  cursor: pointer;
+  border: 1px solid hsl(var(--white) / 0.25);
+  border-radius: 50%;
+  color: var(--white);
+  background-color: transparent;
+  padding: 8px;
+}
+
+.technology-page-menu > .active {
+  color: hsl(var(--darkBlue) / 1);
+  background-color: hsl(var(--white) / 1);
+}
+
+.technology-page-menu :hover {
+  border: 1px solid hsl(var(--white) / 0.8);
+}
+
+.article-technology-container {
+  padding: 0 24px 56px;
+  grid-area: content;
+}
+
+.article-technology-title {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  letter-spacing: 2.36px;
+  text-transform: uppercase;
+  color: hsl(var(--middleBlue));
+}
+
+.article-technology-subtitle {
+  font-family: "Bellefair", serif;
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.article-technology-content {
+  font-size: 15px;
+  line-height: 25px;
+  max-width: 324px;
+  color: hsl(var(--lightBlue));
+}
+
+.article-technology-image-container {
+  width: 100%;
+  grid-area: image;
+
+}
+
+.article-technology-image-container img {
+  height: 170px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center 90%;
+}
+
+
+@media screen and (min-width: 768px) {
+  .technology-page-background {
+    background-image: url("../assets/technology/background-technology-tablet.jpg");
+  }
+  .technology-page-container {
+    gap: 44px;
+    padding-top: 40px;
+  }
+  .technology-page-title {
+    justify-self: left;
+    font-size: 20px;
+    letter-spacing: 3.38px;
+    padding-left: 24px;
+    margin-bottom: 16px;
+  }
+  .technology-page-menu > * {
+    font-size: 24px;
+    width: 60px;
+  }
+  .article-technology-container {
+    padding: 0 0 88px;
+  }
+  .article-technology-title {
+    font-size: 16px;
+    letter-spacing: 2.7px;
+  }
+  .article-technology-subtitle {
+    font-size: 40px;
+  }
+  .article-technology-content {
+    font-size: 16px;
+    line-height: 28px;
+    max-width: 442px;
+  }
+  .article-technology-image-container img {
+    height: 320px;
+    object-position: center 84%;
+    margin-bottom: 12px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .technology-page-background {
+    background-image: url("../assets/technology/background-technology-desktop.jpg");
+  }
+  .technology-page-container {
+    grid-template-columns: minmax(0, 160px) minmax(0, 80px) minmax(0, 768px) minmax(0, 1fr);
+    justify-items: flex-start;
+    gap: 0;
+    text-align: left;
+    padding: 0 0 96px;
+    margin: 0;
+
+    grid-template-areas: 
+    '. title title title .'
+    '. tabs content image .';
+  }
+  .technology-page-title {
+    padding-left: 0;
+    width: 302px;
+    grid-column: 2;
+    font-size: 28px;
+    margin-top: 36px;
+    margin-bottom: 0;
+  }
+  .technology-page-menu {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .technology-page-menu > * {
+    font-size: 32px;
+    width: 80px;
+  }
+  .article-technology-container {
+    padding-left: 80px;
+    padding-bottom: 0;
+  }
+  .article-technology-subtitle {
+    font-size: 56px;
+  }
+  .article-technology-content {
+    font-size: 18px;
+    line-height: 32px;
+    max-width: 444px;
+  }
+  .article-technology-image-container {
+    grid-column: 4;
+    width: 100%;
+  }
+  .article-technology-image-container img {
+    height: 527px;
+    object-fit: none;
+  }
+}
+
+
+
+
+
+
+
+
